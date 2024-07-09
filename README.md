@@ -14,7 +14,9 @@ Storage: Size of biggest uncompressed image data (for stitching) + additional st
 
 ## Using the script
 
-Before running: Set Openslide binary path in converter.py, set jpeg/webp compression attributes (Quality)
+Before running: 
+- Set Openslide binary path in converter.py
+- set webp/jpeg compression attributes (Quality)
 
 usage: `converter.py [-h] [-i INPUT] [-o DEST] [-tw WIDTH] [-th HEIGHT] [-c COMP]`
 
