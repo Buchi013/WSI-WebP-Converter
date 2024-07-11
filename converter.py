@@ -131,7 +131,7 @@ def main():
     parser.add_argument('-o', '--out', help='output directory', nargs=1, dest='output', metavar='DEST', type=str)
     parser.add_argument('-tw', help='tile width (default: 240)', nargs=1, metavar='WIDTH', dest='tw', default=256, type=int)
     parser.add_argument('-th', help='tile height (default: 240)', nargs=1, metavar='HEIGHT', dest='th', default=256, type=int)
-    parser.add_argument('-c', help='compression type (default: webp, options: webp, jpeg, all)', dest='compression', metavar='COMP', type=str)
+    parser.add_argument('-c', help='compression type (default: webp, options: webp, jpeg)', dest='compression', metavar='COMP', type=str)
     
     args = parser.parse_args()
 
@@ -149,11 +149,7 @@ def main():
     if(compression in compression_types):
         process_path(input_path, compression, False)
     else:
-        if(compression=="all"):
-            for c in compression_types:
-                process_path(input_path, c, False)
-        else:
-            print("Compression type not supported")
+        print("Compression type not supported")
     return
 
 if __name__ == "__main__":
